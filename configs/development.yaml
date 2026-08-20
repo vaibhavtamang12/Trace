@@ -1,0 +1,30 @@
+app:
+  name: real-time-recommendation-platform
+  environment: development
+  feature_version: v1
+  model_version: baseline-v1
+
+data:
+  seed: 42
+  users: 1000
+  items: 500
+  interactions: 20000
+  event_weights:
+    impression: 0.01
+    view: 0.05
+    click: 0.20
+    wishlist: 0.35
+    add_to_cart: 0.60
+    purchase: 1.00
+    skip: -0.10
+
+services:
+  kafka: localhost:19092
+  redis: redis://localhost:6379/0
+  mlflow: http://localhost:5000
+
+monitoring:
+  max_p95_ms: 200
+  max_error_rate: 0.01
+  max_feature_drift: 0.20
+  min_ndcg_at_10: 0.05

@@ -1,0 +1,37 @@
+{
+  "users": 100,
+  "items": 80,
+  "interactions": 1000,
+  "event_distribution": {
+    "impression": 0.587,
+    "view": 0.231,
+    "click": 0.067,
+    "purchase": 0.035,
+    "add_to_cart": 0.028,
+    "wishlist": 0.027,
+    "skip": 0.025
+  },
+  "category_distribution": {
+    "electronics": 0.175,
+    "home": 0.1625,
+    "books": 0.1375,
+    "outdoors": 0.125,
+    "fashion": 0.1125,
+    "beauty": 0.1,
+    "grocery": 0.1,
+    "fitness": 0.0875
+  },
+  "null_rates": {
+    "event_id": 0.0,
+    "event_type": 0.0,
+    "user_id": 0.0,
+    "item_id": 0.0,
+    "timestamp": 0.0,
+    "session_id": 0.0,
+    "device_type": 0.0,
+    "position": 0.0,
+    "metadata": 0.0
+  },
+  "timestamp_min": "2026-02-21T18:44:40.503637+00:00",
+  "timestamp_max": "2026-08-20T11:03:40.503637+00:00"
+}

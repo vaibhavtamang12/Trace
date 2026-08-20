@@ -1,0 +1,16 @@
+app:
+  name: real-time-recommendation-platform
+  environment: production
+  feature_version: v1
+  model_version: production
+
+services:
+  kafka: ${KAFKA_BOOTSTRAP_SERVERS}
+  redis: ${REDIS_URL}
+  mlflow: ${MLFLOW_TRACKING_URI}
+
+monitoring:
+  max_p95_ms: 200
+  max_error_rate: 0.01
+  max_feature_drift: 0.20
+  min_ndcg_at_10: 0.05

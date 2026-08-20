@@ -1,0 +1,11 @@
+{
+  "title": "Recommendation Platform Overview",
+  "schemaVersion": 39,
+  "panels": [
+    {"type":"timeseries","title":"API Request Rate","targets":[{"expr":"sum(rate(recommendation_api_requests_total[5m]))","legendFormat":"requests/s"}]},
+    {"type":"timeseries","title":"API Latency","targets":[{"expr":"histogram_quantile(0.95, sum(rate(recommendation_api_latency_seconds_bucket[5m])) by (le))","legendFormat":"p95"}]},
+    {"type":"stat","title":"Recommendations Served","targets":[{"expr":"sum(recommendations_served_total)"}]},
+    {"type":"timeseries","title":"Feature Drift PSI","targets":[{"expr":"recommendation_feature_drift","legendFormat":"{{feature}}"}]},
+    {"type":"timeseries","title":"Model NDCG@10","targets":[{"expr":"recommendation_model_ndcg","legendFormat":"ndcg"}]}
+  ]
+}

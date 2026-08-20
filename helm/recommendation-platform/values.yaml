@@ -1,0 +1,21 @@
+replicaCount: 2
+image:
+  repository: ghcr.io/your-org/recommendation-platform
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8000
+resources:
+  requests: {cpu: 100m, memory: 256Mi}
+  limits: {cpu: 500m, memory: 1Gi}
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+config:
+  APP_ENV: production
+  MODEL_PATH: /app/data/processed/model.joblib
+  FEATURE_VERSION: v1

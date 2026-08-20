@@ -1,0 +1,25 @@
+model:
+  name: recommendation-ranker
+  algorithm: logistic-ranking
+  feature_version: v1
+  hyperparameters:
+    max_iter: 300
+    C: 1.0
+    class_weight: balanced
+
+split:
+  train_fraction: 0.70
+  validation_fraction: 0.15
+  test_fraction: 0.15
+
+metrics:
+  k: 10
+  promotion_min_ndcg_gain: 0.01
+  max_latency_ms: 200
+  max_error_rate: 0.01
+
+serving:
+  candidate_limit: 100
+  default_limit: 10
+  canary_percent: 10
+  rollout_steps: [10, 25, 50, 100]
