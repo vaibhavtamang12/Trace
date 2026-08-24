@@ -79,6 +79,7 @@ The performance targets in the brief are engineering goals, not claims. Run `mak
 
 | Document | Purpose |
 | --- | --- |
+| [IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md) | Phase-by-phase implementation, technology rationale, and file connections |
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Component boundaries and data flow |
 | [DEVELOPMENT.md](docs/DEVELOPMENT.md) | Local development workflow |
 | [DEPLOYMENT.md](docs/DEPLOYMENT.md) | Compose, Kubernetes, and Helm deployment |
